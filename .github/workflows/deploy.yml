@@ -50,7 +50,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages project create ${{ env.PROJECT_NAME }} --production-branch=prod
+          command: pages project create ${{ env.PROJECT_NAME }} --production-branch=main
         continue-on-error: true
 
       - name: Deploy to Cloudflare Pages
