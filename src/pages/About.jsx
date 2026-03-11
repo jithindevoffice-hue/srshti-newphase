@@ -8,7 +8,7 @@ const About = () => {
             <div style={{ marginBottom: '3rem' }}>
                 <h2 className="text-cyan" style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 300 }}>Who We Are</h2>
                 <p style={{ maxWidth: '800px', fontSize: '0.95rem', lineHeight: 1.8 }}>
-                    At Srshti, we are a multidisciplinary digital agency offering cutting-edge software development,
+                    At Srshti designs, we are a multidisciplinary digital agency offering cutting-edge software development,
                     creative design solutions, and strategic digital marketing. With a passion for innovation and a
                     commitment to quality, we help businesses of all sizes grow through smart technology and
                     powerful visual storytelling.
