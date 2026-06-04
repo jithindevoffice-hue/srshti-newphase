@@ -58,7 +58,7 @@ const Footer = () => {
                         <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contact</h4>
                         <ul className="space-y-4">
                             <li className="text-slate-400 text-sm">hello@srshti.in</li>
-                            <li className="text-slate-400 text-sm">+91 90000 00000</li>
+                            <li className="text-slate-400 text-sm">+91 9567804584</li>
                             <li className="text-slate-400 text-sm mt-4">
                                 123 Tech Park,<br />
                                 Bangalore, India
