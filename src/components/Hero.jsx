@@ -68,7 +68,13 @@ const Hero = () => {
                         transition={{ delay: 0.5, duration: 0.8 }}
                         className="flex flex-col sm:flex-row items-center justify-start gap-5 w-full"
                     >
-                        <button className="group relative w-full sm:w-auto px-10 py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl font-black text-sm hover:scale-105 transition-all shadow-2xl shadow-slate-900/20 overflow-hidden">
+                        <button 
+                            onClick={() => {
+                                const el = document.getElementById('contact');
+                                if (el) el.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="group relative w-full sm:w-auto px-10 py-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl font-black text-sm hover:scale-105 transition-all shadow-2xl shadow-slate-900/20 overflow-hidden"
+                        >
                             <span className="relative z-10">START A PROJECT</span>
                             <div className="absolute inset-0 bg-gradient-to-r from-dental-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                             <span className="relative z-10 group-hover:text-white transition-colors" />

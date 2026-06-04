@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import CaseStudies from '../components/CaseStudies';
 import EstimateCalculator from '../components/EstimateCalculator';
+import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 function Landing() {
@@ -13,6 +14,7 @@ function Landing() {
             <Services />
             <CaseStudies />
             <EstimateCalculator />
+            <Contact />
             <Footer />
         </>
     );

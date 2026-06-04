@@ -1,7 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Footer = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const scrollToSection = useCallback((e, href) => {
+        e.preventDefault();
+        const sectionId = href.replace('/#', '');
+        const doScroll = () => {
+            const el = document.getElementById(sectionId);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        };
+        if (location.pathname === '/') {
+            doScroll();
+        } else {
+            navigate('/');
+            setTimeout(doScroll, 400);
+        }
+    }, [location.pathname, navigate]);
+
     return (
         <footer className="bg-slate-900 dark:bg-black pt-20 pb-10 border-t border-slate-800 dark:border-slate-900 transition-colors duration-300">
             <div className="max-w-[100rem] mx-auto px-8 md:px-16 lg:px-24">
@@ -18,11 +36,11 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Services</h4>
                         <ul className="space-y-4">
-                            <li><a href="/#design" className="text-slate-400 hover:text-white transition-colors text-sm">Branding & Identity</a></li>
-                            <li><a href="/#design" className="text-slate-400 hover:text-white transition-colors text-sm">UI/UX Design</a></li>
-                            <li><a href="/#software" className="text-slate-400 hover:text-white transition-colors text-sm">Custom Software</a></li>
-                            <li><a href="/#software" className="text-slate-400 hover:text-white transition-colors text-sm">ERP Implementation</a></li>
-                            <li><a href="/#software" className="text-slate-400 hover:text-white transition-colors text-sm">App Development</a></li>
+                            <li><a href="/#design" onClick={(e) => scrollToSection(e, '/#design')} className="text-slate-400 hover:text-white transition-colors text-sm">Branding & Identity</a></li>
+                            <li><a href="/#design" onClick={(e) => scrollToSection(e, '/#design')} className="text-slate-400 hover:text-white transition-colors text-sm">UI/UX Design</a></li>
+                            <li><a href="/#software" onClick={(e) => scrollToSection(e, '/#software')} className="text-slate-400 hover:text-white transition-colors text-sm">Custom Software</a></li>
+                            <li><a href="/#software" onClick={(e) => scrollToSection(e, '/#software')} className="text-slate-400 hover:text-white transition-colors text-sm">ERP Implementation</a></li>
+                            <li><a href="/#software" onClick={(e) => scrollToSection(e, '/#software')} className="text-slate-400 hover:text-white transition-colors text-sm">App Development</a></li>
                         </ul>
                     </div>
 
@@ -30,9 +48,9 @@ const Footer = () => {
                         <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Company</h4>
                         <ul className="space-y-4">
                             <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">About Us</a></li>
-                            <li><a href="/#work" className="text-slate-400 hover:text-white transition-colors text-sm">Our Work</a></li>
+                            <li><a href="/#work" onClick={(e) => scrollToSection(e, '/#work')} className="text-slate-400 hover:text-white transition-colors text-sm">Our Work</a></li>
                             <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Careers</a></li>
-                            <li><a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Contact</a></li>
+                            <li><a href="/#contact" onClick={(e) => scrollToSection(e, '/#contact')} className="text-slate-400 hover:text-white transition-colors text-sm">Contact</a></li>
                         </ul>
                     </div>
 

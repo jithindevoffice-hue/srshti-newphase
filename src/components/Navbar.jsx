@@ -94,7 +94,10 @@ const Navbar = () => {
 
                         {/* Desktop CTA */}
                         <div className="hidden lg:block">
-                            <button className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-dental-600 dark:hover:bg-dental-400 dark:hover:text-white transition-all shadow-lg active:scale-95 whitespace-nowrap">
+                            <button 
+                                onClick={(e) => scrollToSection(e, '/#contact')}
+                                className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-dental-600 dark:hover:bg-dental-400 dark:hover:text-white transition-all shadow-lg active:scale-95 whitespace-nowrap"
+                            >
                                 Contact Us
                             </button>
                         </div>
@@ -131,7 +134,10 @@ const Navbar = () => {
                                     </a>
                                 ))}
                                 <div className="pt-2 border-t border-slate-100 dark:border-slate-800">
-                                    <button className="w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 py-3 px-4 rounded-xl font-bold text-sm transition-all">
+                                    <button 
+                                        onClick={(e) => scrollToSection(e, '/#contact')}
+                                        className="w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 py-3 px-4 rounded-xl font-bold text-sm transition-all"
+                                    >
                                         Contact Us
                                     </button>
                                 </div>
